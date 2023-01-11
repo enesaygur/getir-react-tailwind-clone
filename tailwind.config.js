@@ -4,6 +4,9 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
+      spacing:{
+        '0.1':'0.063rem'
+      },
       colors: {
         "brand-color": "#4c3398",
         "brand-yellow": "#ffd300",
