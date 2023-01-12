@@ -5,12 +5,12 @@ export default function Menu({ title, items }) {
     <div>
       <section>
         <nav className="grid gap-y-4">
-          <h6 className="text-primary-brand-color text-lg pl-16">{title}</h6>
+          <h6 className="text-primary-brand-color text-lg pl-14">{title}</h6>
           <nav>
             <ul className="grid gap-y-2">
               {items.map((item, key) => (
                 <li key={key}>
-                  <a href="" className="text-sm hover:text-brand-color pl-16">{item.title}</a>
+                  <a href="" className="text-sm hover:text-brand-color pl-14">{item.title}</a>
                 </li>
               ))}
             </ul>
