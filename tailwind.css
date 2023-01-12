@@ -18,3 +18,6 @@
 .flag-select button > span span:nth-child(2) {
   @apply text-sm pl-2;
 }
+.slick-next:before {
+  @apply bg-orange-500
+}

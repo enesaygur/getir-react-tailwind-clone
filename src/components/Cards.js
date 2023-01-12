@@ -6,7 +6,7 @@ export default function Cards() {
     setCards(cardsData);
   }, []);
   return (
-    <div className="container mx-auto w-5/6 grid grid-cols-3 gap-x-4">
+    <div className="container mx-auto grid grid-cols-3 gap-x-4">
       {cards.length &&
         cards.map((card) => (
           <div className="bg-white p-14  rounded-lg shadow-sm flex flex-col items-center text-center">

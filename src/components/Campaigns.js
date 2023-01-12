@@ -1,7 +1,25 @@
 import Slider from "react-slick";
 import { useState, useEffect } from "react";
 import Banners from "api/banners.json";
+import {IoIosArrowBack,IoIosArrowForward} from "react-icons/io"
 export default function Campaigns() {
+  function NextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <button className="text-brand-color absolute top-1/2 -right-6 -traslate-y-1/2" onClick={onClick}>
+        <IoIosArrowForward size={22}/>
+      </button>
+    );
+  }
+  
+  function PrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <button className="text-brand-color absolute top-1/2 -left-6" onClick={onClick}>
+      <IoIosArrowBack size={22}/>
+    </button>
+    );
+  }
   const [banners, setBanners] = useState([]);
   useEffect(() => {
     setBanners(Banners);
@@ -13,12 +31,14 @@ export default function Campaigns() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />
   };
   return (
-    <div className="w-5/6 mx-auto py-8">
-        <h3 className="text-sm font-semibold mb-3  ">Kampanyalar</h3>
-      <Slider {...settings} className="w-11/12">
+    <div className="container mx-auto py-8">
+        <h3 className="text-sm font-semibold mb-3">Kampanyalar</h3>
+      <Slider {...settings} className="mx-auto">
         {banners.length &&
           banners.map((banner, index) => (
             <div key={banner.id}>
