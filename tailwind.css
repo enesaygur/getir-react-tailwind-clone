@@ -19,5 +19,8 @@
   @apply text-sm pl-2;
 }
 .slick-next:before {
-  @apply bg-orange-500
+  @apply bg-orange-500;
+}
+.ReactCollapse--collapse {
+  @apply transition-all;
 }
